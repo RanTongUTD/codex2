@@ -9,6 +9,19 @@ question answering failures and baseline mitigations. It offers:
 - Extractive summarization utilities to compress long documents before querying.
 - A command-line interface for dataset inspection, evaluation, and summary export.
 
+## Completed Tasks
+
+The current release of the toolkit includes the following delivered tasks:
+
+- Implemented the `long_context_eval` Python package with dataset loading, retrieval,
+  summarization, and baseline QA evaluation modules.
+- Curated a synthetic 2024–2025 sample dataset (`data/sample_dataset.json`) for immediate
+  experimentation and testing.
+- Built a CLI (`long_context_eval.cli`) that surfaces dataset summaries, evaluation metrics,
+  and extractive summaries through dedicated subcommands.
+- Added an automated smoke-test helper script
+  (`scripts/run_cli_smoke_tests.py`) to exercise the CLI end-to-end and validate outputs.
+
 ## Getting Started
 
 Create a virtual environment and install the project in editable mode (optional):
