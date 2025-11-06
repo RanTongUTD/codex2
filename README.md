@@ -104,7 +104,11 @@ notebook cell. The snippet below clones the public repository, installs the pack
 editable mode, and runs the smoke-test script while keeping the exported summaries for
 inspection:
 
-```python
+> **Important:** In Colab, put `%%bash` on the very first line of a new cell—do not
+> prefix the snippet with `python` or run it inside a Python cell, otherwise you will
+> see a `SyntaxError`.
+
+```bash
 %%bash
 git clone https://github.com/RanTongUTD/codex2.git
 cd codex2
