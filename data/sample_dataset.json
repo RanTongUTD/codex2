@@ -1,0 +1,50 @@
+{
+  "documents": [
+    {
+      "id": "doc_ai_policy_2024",
+      "title": "2024 AI Safety Policy Report",
+      "year": 2024,
+      "domain": "policy",
+      "text": "Artificial intelligence governance in 2024 emphasizes layered oversight. The report recommends continuous monitoring of high-impact systems. It stresses transparent auditing frameworks and cross-border cooperation. Pilot programs in the European Union demonstrated that annual stress tests reduce deployment risk. The task force also highlights data retention limits and mandatory incident reporting. Finally, it argues that public-private partnerships accelerate responsible innovation when they share evaluation artifacts.",
+      "questions": [
+        {
+          "id": "q1",
+          "question": "What mechanism did the pilot programs in the European Union use to reduce deployment risk?",
+          "answer": "annual stress tests reduce deployment risk",
+          "answer_span": "Pilot programs in the European Union demonstrated that annual stress tests reduce deployment risk.",
+          "category": "factual"
+        },
+        {
+          "id": "q2",
+          "question": "Summarize the core oversight priorities mentioned in the report.",
+          "answer": "layered oversight, transparent auditing, cross-border cooperation, data retention limits, and mandatory incident reporting",
+          "answer_span": "Artificial intelligence governance in 2024 emphasizes layered oversight. The report recommends continuous monitoring of high-impact systems. It stresses transparent auditing frameworks and cross-border cooperation. ... The task force also highlights data retention limits and mandatory incident reporting.",
+          "category": "global"
+        }
+      ]
+    },
+    {
+      "id": "doc_foundation_models_2025",
+      "title": "2025 Foundation Model Evaluation Study",
+      "year": 2025,
+      "domain": "technical",
+      "text": "The 2025 study surveyed foundation models exceeding 200 billion parameters. Researchers benchmarked systems on retrieval-augmented reasoning, multimodal fusion, and safety red teaming. Long-context performance degraded beyond 80K tokens, particularly for policy question answering. To mitigate failures, the study advocates hierarchical chunking, dense retrieval alignment, and post-hoc verification chains. The authors also recommend public leaderboards covering scientific, policy, and biomedical corpora from 2015 to 2025.",
+      "questions": [
+        {
+          "id": "q3",
+          "question": "Beyond what context length did performance degrade?",
+          "answer": "performance degraded beyond 80K tokens",
+          "answer_span": "Long-context performance degraded beyond 80K tokens, particularly for policy question answering.",
+          "category": "factual"
+        },
+        {
+          "id": "q4",
+          "question": "What mitigation strategies did the study advocate?",
+          "answer": "hierarchical chunking, dense retrieval alignment, and post-hoc verification chains",
+          "answer_span": "To mitigate failures, the study advocates hierarchical chunking, dense retrieval alignment, and post-hoc verification chains.",
+          "category": "reasoning"
+        }
+      ]
+    }
+  ]
+}

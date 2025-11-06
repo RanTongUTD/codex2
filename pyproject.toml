@@ -1,0 +1,15 @@
+[project]
+name = "long-context-eval"
+version = "0.1.0"
+description = "Toolkit for probing long-context QA failures"
+authors = [{ name = "Research Team" }]
+requires-python = ">=3.11"
+readme = "README.md"
+
+[build-system]
+requires = ["setuptools>=67", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+package-dir = {"" = "."}
+packages = ["long_context_eval"]
