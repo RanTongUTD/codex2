@@ -97,6 +97,49 @@ Pass `--keep-output` to preserve the generated summaries (they default to a temp
 location) or `--dataset` to point at a different JSON dataset when running your own
 experiments.
 
+### Running on Google Colab
+
+If Colab is your primary environment, the entire toolkit can be exercised in a single
+notebook cell. The snippet below clones the public repository, installs the package in
+editable mode, and runs the smoke-test script while keeping the exported summaries for
+inspection:
+
+```python
+%%bash
+git clone https://github.com/RanTongUTD/codex2.git
+cd codex2
+pip install -e .
+python scripts/run_cli_smoke_tests.py --keep-output --output /content/codex2_summaries.json
+```
+
+To stay inside pure Python (avoiding a `%%bash` cell), you can also paste the following
+helper code which reproduces the same workflow via `subprocess` calls:
+
+```python
+import subprocess
+import sys
+from pathlib import Path
+
+repo_dir = Path("/content/codex2")
+if not repo_dir.exists():
+    subprocess.run(["git", "clone", "https://github.com/RanTongUTD/codex2.git", str(repo_dir)], check=True)
+
+subprocess.run([sys.executable, "-m", "pip", "install", "-e", str(repo_dir)] , check=True)
+
+smoke_test = repo_dir / "scripts" / "run_cli_smoke_tests.py"
+subprocess.run([
+    sys.executable,
+    str(smoke_test),
+    "--keep-output",
+    "--output",
+    "/content/codex2_summaries.json",
+], check=True)
+```
+
+After either variant finishes, open `/content/codex2_summaries.json` in Colab to inspect the
+generated summaries or adjust the script arguments (e.g., `--dataset`) to point at your own
+long-context collections.
+
 ### Programmatic API
 
 ```python
